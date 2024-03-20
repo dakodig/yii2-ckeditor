@@ -36,7 +36,7 @@ class YiiCKEditor extends InputWidget
         $clientOptions = !empty($this->clientOptions)?Json::encode($this->clientOptions):'{}';
 
         $js = [];
-        $js[] = "CKEDITOR.replace('.$id.',$clientOptions)";
+        $js[] = "CKEDITOR.ClassicEditor.create(document.getElementById('.$id.'),$clientOptions)";
         $js[] ="initDakodigCsrfHandler('$id')";
 
         if (array_key_exists('filebrowserUploadUrl', $this->clientOptions) ||

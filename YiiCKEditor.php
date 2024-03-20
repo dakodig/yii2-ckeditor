@@ -37,12 +37,12 @@ class YiiCKEditor extends InputWidget
 
         $js = [];
         $js[] = "CKEDITOR.ClassicEditor.create(document.getElementById('.$id.'),$clientOptions)";
-        $js[] ="initDakodigCsrfHandler('$id')";
-
-        if (array_key_exists('filebrowserUploadUrl', $this->clientOptions) ||
-            array_key_exists('filebrowserImageUploadUrl', $this->clientOptions)) {
-            $js[] = "initDakodigCsrfHandler();";
-        }
+//        $js[] ="initDakodigCsrfHandler('$id')";
+//
+//        if (array_key_exists('filebrowserUploadUrl', $this->clientOptions) ||
+//            array_key_exists('filebrowserImageUploadUrl', $this->clientOptions)) {
+//            $js[] = "initDakodigCsrfHandler();";
+//        }
 
         $view->registerJs(implode("\n", $js));
     }

@@ -1,52 +1,63 @@
 <?php
 return [
-    'height' => 300,
-    'toolbarGroups' => [
-        [
-            'name' => 'clipboard',
-            'groups' => [
-                'mode',
-                'undo',
-                'selection',
-                'clipboard',
-                'doctools',
-            ],
-        ],
-        [
-            'name' => 'editing',
-            'groups' => [
-                'tools',
-                'about',
-            ],
-        ],
-        '/',
-        [
-            'name' => 'paragraph',
-            'groups' => [
-                'templates',
-                'list',
-                'indent',
-                'align',
-            ],
-        ],
-        ['name' => 'insert'],
-        '/',
-        [
-            'name' => 'basicstyles',
-            'groups' => [
-                'basicstyles',
-                'cleanup',
-            ],
-        ],
-        [
-            'name' => 'colors'
-        ],
-        [
-            'name' => 'links'
-        ],
-        [
-            'name' => 'others'
-        ],
+    'toolbar'=>[
+        'alignment',  // Displaying the proper UI element in the toolbar.
+        'heading',
+        '|',
+        'bold',
+        'italic',
+        'link',
+        'bulletedList',
+        'numberedList',
+        '|',
+        'outdent',
+        'indent',
+        '|',
+        'imageUpload',
+        'blockQuote',
+        'insertTable',
+        'mediaEmbed',
+        'undo',
+        'redo'
     ],
-    'removeButtons' => 'Smiley,Iframe'
+    'plugins'=>[
+        'Alignment',  // Adding the package to the list of plugins.
+        'Autoformat',
+        'BlockQuote',
+        'Bold',
+        'CloudServices',
+        'Essentials',
+        'Heading',
+        'Image',
+        'ImageCaption',
+        'ImageStyle',
+        'ImageToolbar',
+        'ImageUpload',
+        'Indent',
+        'Italic',
+        'Link',
+        'List',
+        'MediaEmbed',
+        'Paragraph',
+        'PasteFromOffice',
+        'Table',
+        'TableToolbar'
+    ],
+    'language'=>'en',
+    'image'=>[
+        'toolbar'=>[
+            'imageTextAlternative',
+            'toggleImageCaption',
+            'imageStyle:inline',
+            'imageStyle:block',
+            'imageStyle:side'
+        ]
+    ],
+    'table'=>[
+        'contentToolbar'=>[
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    ]
 ];

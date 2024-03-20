@@ -12,7 +12,7 @@ use yii\helpers\Json;
  */
 class YiiCKEditor extends InputWidget
 {
-    use \OptionsTrait;
+    use OptionsTrait;
 
     public function init()
     {
@@ -30,7 +30,7 @@ class YiiCKEditor extends InputWidget
     protected function initEditor():void
     {
         $view = $this->getView();
-        \CKEditorAsset::register($view);
+        CKEditorAsset::register($view);
 
         $id = $this->options['id'];
         $clientOptions = !empty($this->clientOptions)?Json::encode($this->clientOptions):'{}';

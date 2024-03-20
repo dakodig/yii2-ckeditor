@@ -1,4 +1,6 @@
 <?php
+namespace dakodig\yii2ckeditor;
+
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 

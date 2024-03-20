@@ -6,10 +6,9 @@ use yii\web\YiiAsset;
 use yii\web\JqueryAsset;
 
 class CKEditorAsset extends AssetBundle{
-    public $sourcePath=__DIR__.'/ckeditor/';
 
     public $js=[
-      'ckeditor.js',
+      __DIR__.'/ckeditor/ckeditor.js',
     ];
 
     public $jsOptions=[

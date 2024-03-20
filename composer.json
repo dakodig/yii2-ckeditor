@@ -13,7 +13,7 @@
     "require": {
         "php": ">=8.0",
         "yiisoft/yii2": "~2.0.0",
-        "ckeditor/ckeditor5": "^41.2.0"
+        "ckeditor/ckeditor": "^41.2.0"
     },
     "autoload": {
         "psr-4": {

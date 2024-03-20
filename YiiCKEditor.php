@@ -32,11 +32,11 @@ class YiiCKEditor extends InputWidget
         $view = $this->getView();
         CKEditorAsset::register($view);
 
-        $id = '#'.$this->options['id'];
+        $id = $this->options['id'];
         $clientOptions = !empty($this->clientOptions)?Json::encode($this->clientOptions):'{}';
 
         $js = [];
-        $js[] = "CKEDITOR.ClassicEditor.create(document.getElementById('.$id.'),$clientOptions)";
+        $js[] = "CKEDITOR.ClassicEditor.create(document.querySelector('.$id.'),$clientOptions)";
 //        $js[] ="initDakodigCsrfHandler('$id')";
 //
 //        if (array_key_exists('filebrowserUploadUrl', $this->clientOptions) ||

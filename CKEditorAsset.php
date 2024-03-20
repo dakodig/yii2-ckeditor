@@ -6,7 +6,7 @@ use yii\web\YiiAsset;
 use yii\web\JqueryAsset;
 
 class CKEditorAsset extends AssetBundle{
-    public $sourcePath='@vendor/dakodig/yii2ckeditor/ckeditor';
+    public $sourcePath=__DIR__.'/ckeditor/';
 
     public $js=[
       'ckeditor.js',

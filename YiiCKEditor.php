@@ -32,7 +32,7 @@ class YiiCKEditor extends InputWidget
         $view = $this->getView();
         CKEditorAsset::register($view);
 
-        $id = $this->options['id'];
+        $id = '#'.$this->options['id'];
         $clientOptions = !empty($this->clientOptions)?Json::encode($this->clientOptions):'{}';
 
         $js = [];
